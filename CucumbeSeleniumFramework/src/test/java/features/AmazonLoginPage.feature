@@ -11,3 +11,4 @@ Feature: Amazon Search
     And I sort the results by price 
     Then I log the price of the lowest ticketed item
     And I log the price of the highest ticketed item
+     And close browser
