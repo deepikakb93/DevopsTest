@@ -25,7 +25,7 @@ Amazon Search Feature
 This project demonstrates how to automate the Amazon search functionality using Behavior-Driven Development (BDD) 
 with Java and Selenium.
 
-Prerequisites
+**Prerequisites**
 
 Java 8 or above
 
@@ -33,21 +33,21 @@ Maven
 
 WebDriver compatible with your browser (Chrome)
 
-Setup
+**Setup**
 
-Clone the repository: git clone git@github.com:deepikakb93/DevopsTest.git
+**Clone the repository:** git clone git@github.com:deepikakb93/DevopsTest.git
 
-Set up WebDriver:
+**Set up WebDriver:**
 
 Download the WebDriver executable for your preferred browser.
 
 Update the WebDriver path in the Eg: Devops_project/CucumbeSeleniumFramework/chromedriver.exe.
 
-Running the Tests
+**Running the Tests**
 
 mvn test
 
-Test Scenario
+**Test Scenario**
 
 Feature: Amazon Search
 
@@ -63,7 +63,7 @@ Feature: Amazon Search
     Then I log the price of the lowest ticketed item
     And I log the price of the highest ticketed item
 	
-Project Structure:
+**Project Structure:**
 
 src/test/java
 
@@ -84,8 +84,8 @@ src/test/java
 		-VerifyingApi.java
 
   
-pages: Contains Java classes representing the page objects for the Amazon website.(Eg: AmazonHomePage, AmazonSearchResultsPage)
+**pages**: Contains Java classes representing the page objects for the Amazon website.(Eg: AmazonHomePage, AmazonSearchResultsPage)
 
-steps: Contains the step definitions for the BDD scenario.
+**steps**: Contains the step definitions for the BDD scenario.
 
-features: Contains the feature file describing the BDD scenario.(Eg: AmazonLoginPage.feature, ApiTest.feature)
+**features**: Contains the feature file describing the BDD scenario.(Eg: AmazonLoginPage.feature, ApiTest.feature)
