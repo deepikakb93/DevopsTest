@@ -64,5 +64,9 @@ public class AmazonSearchSteps {
 	        resultsPage.logLowestAndHighestPrices();
 	    }
 
+	 @Then("close browser")
+	    public void close_browser()  throws InterruptedException {
+	        homePage.teardown();
+	    }
 	    // Add @After hook or method to close the browser and cleanup resources
 }
