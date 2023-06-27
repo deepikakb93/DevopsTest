@@ -14,7 +14,9 @@ public class AmazonHomePage {
     }
 
     public void open() {
-        driver.get("https://www.amazon.com");
+        driver.get("https://www.amazon.com");	    
+        driver.manage().window().maximize();
+        driver.navigate().refresh();
     }
 
     public void search(String searchTerm) {
