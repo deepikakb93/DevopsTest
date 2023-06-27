@@ -21,4 +21,7 @@ public class AmazonHomePage {
         driver.findElement(searchBox).sendKeys(searchTerm);
         driver.findElement(searchBox).submit();
     }
+	public void teardown() {
+        driver.quit();
+    }
 }
