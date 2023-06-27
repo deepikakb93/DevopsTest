@@ -66,12 +66,13 @@ Feature: Amazon Search
 Project Structure:
 
 src/test/java
+
     -Features
 		-AmazonLoginPage.feature
-    -ApiTest.feature
+     -ApiTest.feature
         
     -pageObjects
-	-AmazonHomePage.java
+	  -AmazonHomePage.java
       -AmazonSearchResultsPage.java
             
     -runners
