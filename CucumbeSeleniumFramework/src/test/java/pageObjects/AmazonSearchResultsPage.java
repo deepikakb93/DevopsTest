@@ -18,12 +18,12 @@ public class AmazonSearchResultsPage {
 	   
 
 	    // Locators
-	    private By searchBox = By.id("twotabsearchtextbox");
-	    //private By brandFilter = By.xpath("//span[contains(text(),'Sony')]");
-	   // private By resolutionFilter = By.xpath("//*[contains(text(),'Resolution')]/parent::*/following::ul[1]//*[contains(text(),'4K')]");
-	   // private By modelYearFilter = By.xpath("//*[contains(text(),'Model Year')]/parent::*/following::ul[1]//*[contains(text(),'2022')]");
+	     private By searchBox = By.id("twotabsearchtextbox");
 	    private By sortbyfeatured=By.xpath("(//span[contains(text(),'Featured')])[1]");
-	    private By hightolowfilter=By.xpath("//a[contains(text(),'Price: High to Low')]");
+	    private By hightolowfilter=By.xpath("(//div[contains(@class,'a-popover-wrapper')]//following::a)[1]");
+	    private By lowestvalue=By.xpath("((//div[contains(@class,'a-section a-spacing-small puis-padding')])[1]//child::a)[4]");
+	    private By lowtohighfilter=By.xpath("//span[contains(text(),'Price: High to low')]");
+	   private By dropdown_box=By.xpath("//span[contains(text(),'Price: Low to high')]");
 	    
 	    public AmazonSearchResultsPage(WebDriver driver) {
 	        this.driver = driver;
@@ -64,7 +64,7 @@ public class AmazonSearchResultsPage {
 	        filter.click();
 	    }
 
-	    public void sortByPriceHighToLow() throws InterruptedException {
+	     public void sortByPriceHighToLow() throws InterruptedException {
 	        // Implementation to sort results by price (high to low)
 	    	driver.findElement(sortbyfeatured).click();
 	    	Thread.sleep(5000);
@@ -72,7 +72,14 @@ public class AmazonSearchResultsPage {
 	    	
 	    }
 
-	    public void logLowestAndHighestPrices() {
+	    public void logLowestAndHighestPrices() throws InterruptedException {
 	        // Implementation to log the lowest and highest ticketed item prices
+	    	String value1=driver.findElement(lowestvalue).getText();
+	       //double lowestPrice = Double.parseDouble(value1);
+	        System.out.println("Lowest Price: $" + value1);
+	    	/*String value2=driver.findElement(lowestvalue).getText().replaceAll("[^\\d.]+", "");
+		      // double highestPrice = Double.parseDouble(value2);
+		        System.out.println("Lowest Price: $" + value2);*/
+	    	
 	    }
 }
